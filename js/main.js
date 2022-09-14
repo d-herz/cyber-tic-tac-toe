@@ -179,7 +179,9 @@ function turnAnnouncement(){
 
 
 //This massive function assigns all the grid 'src' attributes to arrays that represent all 8 possible winning conditions. It then checks the 'src' attributes of each array and if they are all the same, and if so console logs the player that won
+let winner = document.querySelector(".winner")
 function winCondition(){
+
   //Win Condition (Rows)
   const winR1 = [a1.getAttribute('src'), a2.getAttribute('src'), a3.getAttribute('src')]
   const winR2 = [b1.getAttribute('src'), b2.getAttribute('src'), b3.getAttribute('src')]
@@ -196,54 +198,70 @@ function winCondition(){
 
   if (winR1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
+
   }else if(winR1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
 
   }else if(winR2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
 
   }else if(winR2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
 
   }else if(winR3.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
 
   }else if(winR3.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
   
   }else if(winC1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
 
   }else if(winC1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
 
   }else if(winC2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
 
   }else if(winC2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
 
   }else if(winC3.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
   
   }else if(winC3.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
 
   }else if(winD1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
 
   }else if(winD1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
 
   }else if(winD2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
+    winner.innerText = 'Player 1 Wins!!!'
 
   }else if(winD2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
+    winner.innerText = 'Player 2 Wins!!!'
   }
  
 }
-
 
 
 //Add eventlistener/click-event to button which calls clearBoard 
@@ -251,6 +269,7 @@ document.querySelector('.clear').addEventListener('click', clearBoard)
 
 function clearBoard(){
   console.log('clear')
+  winner.innerText = ''
 
   const imageSet = document.querySelectorAll('.playLocation')
   const imageCount = imageSet.length
