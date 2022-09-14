@@ -25,7 +25,7 @@ const middleMiddle = document.querySelector("#middleCenter")
   const b2 = document.querySelector('#b2')
 
 const middleRight = document.querySelector("#middleRight")
-  middleRight.addEventListener('click', tileB2)
+  middleRight.addEventListener('click', tileB3)
   const b3 = document.querySelector('#b3')
 
 //Bottom Row
@@ -62,114 +62,101 @@ function onClick() {
 
 //These functions run depending on which tile is clicked, and toggle the X or the 0 depending on if it is an odd click or an even click (O's are odd, X's are even)
 //NEW WAY 9-14-22: use setAttribute to set img src to corresponding game piece, based on how many clicks. This allows me to elminate having 2 img conatiners on each grid section. 
-//These conditionals could be ternary
+
 function tileA1(){
-  onClick()
-  if( clicks % 2 !== 0){
-    a1.setAttribute('src', '/js/game-piece/O.png' )
-    // document.querySelector('#a1o').toggleAttribute('hidden')
-  }else{
-    a1.setAttribute('src', '/js/game-piece/X.png' )
-    // document.querySelector('#a1x').toggleAttribute('hidden')
-  }
-  winCondition()
+  onClick();
+
+  clicks % 2 !== 0 ? a1.setAttribute('src', '/js/game-piece/O.png' ) 
+    : a1.setAttribute('src', '/js/game-piece/X.png' );
+ 
+  winCondition();
 }
 
 function tileA2(){
-  onClick()
-  if( clicks % 2 !== 0){
-    a2.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    a2.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+
+  clicks % 2 !== 0 ? a2.setAttribute('src', '/js/game-piece/O.png' ) 
+    : a2.setAttribute('src', '/js/game-piece/X.png' );
+
+  winCondition();
 }
 
 function tileA3(){
-  onClick()
-  if( clicks % 2 !== 0){
-    a3.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    a3.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+
+  clicks % 2 !== 0 ? a3.setAttribute('src', '/js/game-piece/O.png' ) 
+    : a3.setAttribute('src', '/js/game-piece/X.png' );
+
+  winCondition();
 }
 
 //Row B functions
 function tileB1(){
-  onClick()
-  if( clicks % 2 !== 0){
-    b1.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    b1.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+  
+  clicks % 2 !== 0 ? b1.setAttribute('src', '/js/game-piece/O.png' ) 
+    : b1.setAttribute('src', '/js/game-piece/X.png' )
+
+  winCondition();
 }
 
 function tileB2(){
-  onClick()
-  if( clicks % 2 !== 0){
-    b2.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    b2.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+  
+  clicks % 2 !== 0 ? b2.setAttribute('src', '/js/game-piece/O.png' ) 
+    : b2.setAttribute('src', '/js/game-piece/X.png' )
+
+  winCondition();
 }
 
 function tileB3(){
-  onClick()
-  if( clicks % 2 !== 0){
-    b3.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    b3.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+
+  clicks % 2 !== 0 ? b3.setAttribute('src', '/js/game-piece/O.png' ) 
+    : b3.setAttribute('src', '/js/game-piece/X.png' );
+
+  winCondition();
 }
 
 
 //Row C functions
 function tileC1(){
-  onClick()
-  if( clicks % 2 !== 0){
-    c1.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    c1.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+  
+  clicks % 2 !== 0 ? c1.setAttribute('src', '/js/game-piece/O.png' ) 
+    : c1.setAttribute('src', '/js/game-piece/X.png' );
+
+  winCondition();
 }
 
 function tileC2(){
-  oonClick()
-  if( clicks % 2 !== 0){
-    c2.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    c2.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+  
+  clicks % 2 !== 0 ? c2.setAttribute('src', '/js/game-piece/O.png' ) 
+    : c2.setAttribute('src', '/js/game-piece/X.png' );
+
+  winCondition();
 }
 
 function tileC3(){
-  onClick()
-  if( clicks % 2 !== 0){
-    c3.setAttribute('src', '/js/game-piece/O.png' )
-  }else{
-    c3.setAttribute('src', '/js/game-piece/X.png' )
-  }
-  winCondition()
+  onClick();
+  
+  clicks % 2 !== 0 ? c3.setAttribute('src', '/js/game-piece/O.png' ) 
+    : c3.setAttribute('src', '/js/game-piece/X.png' );
+
+  winCondition();
 }
+
 
 //Win Condition
 function winCondition(){
-  // if( topLeftIdO.getAttribute('hidden') === topRightIdO.getAttribute('hidden') && topLeftIdO.getAttribute('hidden') === topMiddleIdO.getAttribute('hidden')){
-  //   console.log('you win')
-  // }else{
-  // }
+  //write logic here
   
 }
 
 
 
-//add button to clear board 
+//Add eventlistener/click-event to button which calls clearBoard 
 document.querySelector('.clear').addEventListener('click', clearBoard)
 
 function clearBoard(){
