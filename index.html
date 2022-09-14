@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>dTic Tac Toe</title>
+
+		<!-- external CSS link -->
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<h1>TIC TAC TOE</h1>
+			<h2>Authored By... <a href="">WebDevDan</a></h2>
+		</header>
+		
+		<main>
+			<section class="top">
+
+				<section id="topLeft">
+					<img class="playLocation left" id="a1o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation left" id="a1x" src="/js/game-piece/X.png" alt="" hidden>
+
+				</section>
+				<section id="topCenter">
+					<img class="playLocation center" id="a2o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation center" id="a2x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+
+				<section id="topRight">
+					<img class="playLocation right" id="a3o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation right" id="a3x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+
+			</section>
+
+			<section class="middle">
+
+				<section id="middleLeft">
+					<img class="playLocation left" id="b1o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation left" id="b1x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+				<section id="middleCenter">
+					<img class="playLocation center" id="b2o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation center" id="b2x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+				<section id="middleRight">
+					<img class="playLocation right" id="b3o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation right" id="b3x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+
+			</section>
+
+			<section class="bottom">
+
+				<section id="bottomLeft">
+					<img class="playLocation left" id="c1o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation left" id="c1x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+				<section id="bottomCenter">
+					<img class="playLocation center" id="c2o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation center" id="c2x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+				<section id="bottomRight">
+					<img class="playLocation right" id="c3o" src="/js/game-piece/O.png" alt="" hidden>
+					<img class="playLocation right" id="c3x" src="/js/game-piece/X.png" alt="" hidden>
+				</section>
+
+			</section>
+
+
+
+			<button class="clear">Clear Board!</button>
+
+
+			<button class ="start-game">Click here to play the game</button>
+			<button class = "end-turn" hidden>"Click here to end your turn"</button>
+			<!-- <button class = "force-switch">"Click here to change the current turn"</button> -->
+
+			<h2 hidden class= "current-turn"></h2>
+		</main>
+		<footer>
+			<p>#100 Devs We Go Get!!!</p>
+		</footer>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
