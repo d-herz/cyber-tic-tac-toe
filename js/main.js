@@ -70,6 +70,7 @@ function tileA1(){
     : a1.setAttribute('src', '/js/game-piece/X.png' );
  
   winCondition();
+  turnAnnouncement();
 }
 
 function tileA2(){
@@ -79,6 +80,7 @@ function tileA2(){
     : a2.setAttribute('src', '/js/game-piece/X.png' );
 
   winCondition();
+  turnAnnouncement();
 }
 
 function tileA3(){
@@ -88,6 +90,7 @@ function tileA3(){
     : a3.setAttribute('src', '/js/game-piece/X.png' );
 
   winCondition();
+  turnAnnouncement();
 }
 
 //Row B functions
@@ -98,6 +101,7 @@ function tileB1(){
     : b1.setAttribute('src', '/js/game-piece/X.png' )
 
   winCondition();
+  turnAnnouncement();
 }
 
 function tileB2(){
@@ -107,6 +111,7 @@ function tileB2(){
     : b2.setAttribute('src', '/js/game-piece/X.png' )
 
   winCondition();
+  turnAnnouncement();
 }
 
 function tileB3(){
@@ -116,6 +121,7 @@ function tileB3(){
     : b3.setAttribute('src', '/js/game-piece/X.png' );
 
   winCondition();
+  turnAnnouncement();
 }
 
 
@@ -127,6 +133,7 @@ function tileC1(){
     : c1.setAttribute('src', '/js/game-piece/X.png' );
 
   winCondition();
+  turnAnnouncement();
 }
 
 function tileC2(){
@@ -136,6 +143,7 @@ function tileC2(){
     : c2.setAttribute('src', '/js/game-piece/X.png' );
 
   winCondition();
+  turnAnnouncement();
 }
 
 function tileC3(){
@@ -145,6 +153,27 @@ function tileC3(){
     : c3.setAttribute('src', '/js/game-piece/X.png' );
 
   winCondition();
+  turnAnnouncement();
+}
+
+
+
+//Turn Announcement Function puts text into empty h2
+
+let playerTurn = document.querySelector(".current-turn")
+function turnAnnouncement(){
+  
+  if( clicks >= 9){
+    playerTurn.innerText = "Game Over!"
+  }else if(clicks === 0){
+    playerTurn.innerText = "Player 1 Begin Game"
+  }else if (clicks % 2 !== 0){
+    playerTurn.innerText = "It is currently player two's turn"
+  }else if( clicks % 2 === 0){
+    playerTurn.innerText = "It is currently player one's turn"
+
+  }
+
 }
 
 
@@ -172,4 +201,6 @@ function clearBoard(){
     imageSet[i].setAttribute('src', '')
   }
   clicks = 0
+
+  turnAnnouncement()
 }
