@@ -165,7 +165,7 @@ function turnAnnouncement(){
     playerTurn.innerText = "Game Over!"
 
   }else if(clicks === 0){
-    playerTurn.innerText = "Player 1 Begin Game"
+    playerTurn.innerText = "Player 1 Click a Tile to Begin Game"
 
   }else if (clicks % 2 !== 0){
     playerTurn.innerText = "It is currently player two's turn"
@@ -259,6 +259,8 @@ function winCondition(){
   }else if(winD2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+  }else{
+    winner.innerText = 'DRAW!'
   }
  
 }
@@ -284,3 +286,4 @@ function clearBoard(){
 
   turnAnnouncement()
 }
+
