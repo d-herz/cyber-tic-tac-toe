@@ -1,6 +1,6 @@
 //First we assign a variable to each square of the game board
 //Then we attach an event listener and corresponding function
-//The 2nd const are for the image container (a1, b1 etc) win condition later
+//The 2nd const are for the image container (a1, b1 etc) and win condition later
 
 //Top row
 const topLeft = document.querySelector("#topLeft")
@@ -159,28 +159,89 @@ function tileC3(){
 
 
 //Turn Announcement Function puts text into empty h2
-
 let playerTurn = document.querySelector(".current-turn")
 function turnAnnouncement(){
-  
   if( clicks >= 9){
     playerTurn.innerText = "Game Over!"
+
   }else if(clicks === 0){
     playerTurn.innerText = "Player 1 Begin Game"
+
   }else if (clicks % 2 !== 0){
     playerTurn.innerText = "It is currently player two's turn"
+
   }else if( clicks % 2 === 0){
     playerTurn.innerText = "It is currently player one's turn"
-
   }
-
 }
 
 
-//Win Condition
+
+
+//This massive function assigns all the grid 'src' attributes to arrays that represent all 8 possible winning conditions. It then checks the 'src' attributes of each array and if they are all the same, and if so console logs the player that won
 function winCondition(){
-  //write logic here
+  //Win Condition (Rows)
+  const winR1 = [a1.getAttribute('src'), a2.getAttribute('src'), a3.getAttribute('src')]
+  const winR2 = [b1.getAttribute('src'), b2.getAttribute('src'), b3.getAttribute('src')]
+  const winR3 = [c1.getAttribute('src'), c2.getAttribute('src'), c3.getAttribute('src')]
+
+  //Win Condition (Columnss)
+  const winC1 = [a1.getAttribute('src'), b1.getAttribute('src'), c1.getAttribute('src')]
+  const winC2 = [a2.getAttribute('src'), b2.getAttribute('src'), c2.getAttribute('src')]
+  const winC3 = [a3.getAttribute('src'), b3.getAttribute('src'), c3.getAttribute('src')]
+
+  //Win Condition (Diags)
+  const winD1 = [a1.getAttribute('src'), b2.getAttribute('src'), c3.getAttribute('src')]
+  const winD2 = [a3.getAttribute('src'), b2.getAttribute('src'), c1.getAttribute('src')]
+
+  if (winR1.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+  }else if(winR1.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+
+  }else if(winR2.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+
+  }else if(winR2.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+
+  }else if(winR3.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+
+  }else if(winR3.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
   
+  }else if(winC1.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+
+  }else if(winC1.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+
+  }else if(winC2.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+
+  }else if(winC2.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+
+  }else if(winC3.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+  
+  }else if(winC3.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+
+  }else if(winD1.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+
+  }else if(winD1.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+
+  }else if(winD2.every( x => x === '/js/game-piece/O.png')){
+    console.log('Player 1 Wins!')
+
+  }else if(winD2.every( x => x === '/js/game-piece/X.png')){
+    console.log('Player 2 Wins!')
+  }
+ 
 }
 
 
