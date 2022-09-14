@@ -42,14 +42,8 @@ const bottomRight = document.querySelector("#bottomRight")
   const c3 = document.querySelector('#c3')
 
 
-//This variable is an array for each square of the grid, using the above decalred variables (not needed right now)  
-// const gridArray = [topLeft, topMiddle, topRight, middleLeft, middleMiddle, middleRight, bottomLeft, bottomMiddle, bottomRight]
-
-//This forEach assigns an event listener to each grid (not needed, added onClick function call to the functions for each tile)
-// gridArray.forEach(square => square.addEventListener("click", onClick)) 
-
-
 //This variable and function allows the players to alternate between either revealing an 'X' or an 'O'
+
 let clicks = 0;
 
 function onClick() {
@@ -61,8 +55,8 @@ function onClick() {
 }
 
 //These functions run depending on which tile is clicked, and toggle the X or the 0 depending on if it is an odd click or an even click (O's are odd, X's are even)
-//NEW WAY 9-14-22: use setAttribute to set img src to corresponding game piece, based on how many clicks. This allows me to elminate having 2 img conatiners on each grid section. 
 
+//Row A Functions
 function tileA1(){
   onClick();
 
@@ -176,9 +170,7 @@ function turnAnnouncement(){
 }
 
 
-
-
-//This massive function assigns all the grid 'src' attributes to arrays that represent all 8 possible winning conditions. It then checks the 'src' attributes of each array and if they are all the same, and if so console logs the player that won
+//This massive function assigns all the grid 'src' attributes to arrays that represent all 8 possible winning conditions. It then checks the 'src' attributes of each array to see if they are all the same, and if they are then announces the winner
 let winner = document.querySelector(".winner")
 function winCondition(){
 
@@ -199,75 +191,89 @@ function winCondition(){
   if (winR1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winR1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
 
   }else if(winR2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winR2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
 
   }else if(winR3.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winR3.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
   
   }else if(winC1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winC1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
 
   }else if(winC2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winC2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
 
   }else if(winC3.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
   
   }else if(winC3.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
 
   }else if(winD1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winD1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
+    alert('Player 2 Wins!!!')
 
   }else if(winD2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
+    alert('Player 1 Wins!!!')
 
   }else if(winD2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-  }else{
-    winner.innerText = 'DRAW!'
+    alert('Player 2 Wins!!!')
   }
  
 }
 
 
 //Add eventlistener/click-event to button which calls clearBoard 
-document.querySelector('.clear').addEventListener('click', clearBoard)
+document.querySelector('.start-clear').addEventListener('click', clearBoard)
 
 function clearBoard(){
   console.log('clear')
@@ -283,6 +289,9 @@ function clearBoard(){
     imageSet[i].setAttribute('src', '')
   }
   clicks = 0
+
+  //unhide game board (gameboard not shown on first page load)
+  document.querySelector('.gameBoard').classList.remove('hidden')
 
   turnAnnouncement()
 }

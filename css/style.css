@@ -17,12 +17,15 @@
 	clear: both;
 }
 
+/* html{
+     font-size: 62.5%;
+
+} */
+
 /* Body and Main Styles */
 body {
      width: 100%;
-     height: 100vh;
      text-align: center;
-     font-size: 62.5%;
      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(3, 234, 255, 0.398),rgba(255, 6, 6, 0.4),rgba(0, 0, 0, 0.8)), url("paper-2.jpg");
      background-size: cover;
      background-repeat: no-repeat;
@@ -55,7 +58,7 @@ header h2{
 
 main{
      width: 100%;
-     margin-top: 10rem;  
+     margin-top: 4rem;  
 }
      @media screen and (max-width: 400px) {
           main{
@@ -72,6 +75,11 @@ main section{
                height: 7rem;
           }
      }
+
+
+.gameBoard{
+     height: 30rem;
+}
 
 /* Row Styles, Sizing, and Media Queries*/
 
@@ -167,7 +175,7 @@ footer {
 /*** BUTTONS ***/
 
 button{
-     margin: 4% ;
+     margin: 4% 4% 0 4% ;
      padding: .5%;
      font-size: 1.4rem;
      border-radius: 15%;
