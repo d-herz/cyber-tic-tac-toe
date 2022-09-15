@@ -151,7 +151,6 @@ function tileC3(){
 }
 
 
-
 //Turn Announcement Function puts text into empty h2
 let playerTurn = document.querySelector(".current-turn")
 function turnAnnouncement(){
@@ -162,10 +161,10 @@ function turnAnnouncement(){
     playerTurn.innerText = "Player 1 Click a Tile to Begin Game"
 
   }else if (clicks % 2 !== 0){
-    playerTurn.innerText = "It is currently player two's turn"
+    playerTurn.innerText = "Player two's turn"
 
   }else if( clicks % 2 === 0){
-    playerTurn.innerText = "It is currently player one's turn"
+    playerTurn.innerText = "Player one's turn"
   }
 }
 
@@ -191,22 +190,22 @@ function winCondition(){
   if (winR1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
 
   }else if(winR1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
 
   }else if(winR2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
 
   }else if(winR2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
 
   }else if(winR3.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
@@ -216,57 +215,57 @@ function winCondition(){
   }else if(winR3.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
   
   }else if(winC1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
 
   }else if(winC1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
 
   }else if(winC2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
 
   }else if(winC2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
 
   }else if(winC3.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
   
   }else if(winC3.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
 
   }else if(winD1.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
 
   }else if(winD1.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
 
   }else if(winD2.every( x => x === '/js/game-piece/O.png')){
     console.log('Player 1 Wins!')
     winner.innerText = 'Player 1 Wins!!!'
-    alert('Player 1 Wins!!!')
+    // alert('Player 1 Wins!!!')
 
   }else if(winD2.every( x => x === '/js/game-piece/X.png')){
     console.log('Player 2 Wins!')
     winner.innerText = 'Player 2 Wins!!!'
-    alert('Player 2 Wins!!!')
+    // alert('Player 2 Wins!!!')
   }
  
 }
