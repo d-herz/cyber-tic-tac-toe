@@ -72,7 +72,6 @@ main{
      }
 
 main .current-turn{
-     /* color: white; */
      text-shadow: 2px 2px 5px blue;
      color: rgba(3, 234, 255);
 
@@ -218,7 +217,8 @@ main section{
 
 footer {
      font-size: 1.5rem;
-     text-shadow: 1px 1px 2px white;
+     text-shadow: 2px 2px 5px blue;
+     color: rgba(3, 234, 255);
      margin: 7%;
 }
 
